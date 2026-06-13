@@ -18,7 +18,7 @@
 		</data>
 		<key>Resources/GrokStudio/grok_studio.py</key>
 		<data>
-		iPXQlCAIK8UZ5pXvbByNzDrdDq0=
+		Fo8RFIH9Q/bTzNNj69hxNr9JBA4=
 		</data>
 		<key>Resources/GrokStudio/run_grok_studio.command</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Resources/GrokStudio/studio_static/app.css</key>
 		<data>
-		054PMjh2e7as+EbVGtyyK2I7GFY=
+		tz7GGA0a3xdvqKImuklJear4BWg=
 		</data>
 		<key>Resources/GrokStudio/studio_static/app.js</key>
 		<data>
-		ZDddIS0XVHvyZ38GBqCoVty5ZN8=
+		PYKbc+hlk0tOI2awVEig+tuggmo=
 		</data>
 		<key>Resources/GrokStudio/studio_static/editor.css</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>Resources/GrokStudio/studio_static/index.html</key>
 		<data>
-		Kvm3P4r4zi5psjxtqQTQA21wjC8=
+		tGUs3NhJvGVCu/IxQtCx0Zmfd2Y=
 		</data>
 		<key>Resources/GrokStudio/studio_static/vendor/tui-image-editor/THIRD_PARTY_NOTICES.md</key>
 		<data>
@@ -172,7 +172,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MSvNSkKoqoh6x28VOsO1nHY5Lnq75HjSpE5HEAJzwDE=
+			syVLRRs9qeNdwGZCUuOmBFexkHuPMPlAZyvKOMOaaWg=
 			</data>
 		</dict>
 		<key>Resources/GrokStudio/run_grok_studio.command</key>
@@ -200,14 +200,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wAt4LlWsn95fhzC4eBVFAX3prZi1UXvHr5QEl+Wpmms=
+			B8aJuEKt36Lqnsl427nvQWHwVY0K+hZsUfQXB8r4P/w=
 			</data>
 		</dict>
 		<key>Resources/GrokStudio/studio_static/app.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hXzbk1zIIc/MVgFjO/19q3ZDSVgoFW9HY+p0Q7eg42s=
+			CFgXNZ9J2pZ1TsAMOcYRrhYYLF2VzvNS/N+VFB6l3y0=
 			</data>
 		</dict>
 		<key>Resources/GrokStudio/studio_static/editor.css</key>
@@ -340,7 +340,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FOI7EvxyBvpTsZ9eRR9gdb67aO4q48USFDN8D+Xjrqw=
+			KQrZq9Xe4tp44hA4HKIGEhKMBlBtcTo+cg3GCE/+nFo=
 			</data>
 		</dict>
 		<key>Resources/GrokStudio/studio_static/vendor/tui-image-editor/THIRD_PARTY_NOTICES.md</key>
