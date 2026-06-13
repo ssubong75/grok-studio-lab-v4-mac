@@ -29,6 +29,13 @@ folder:
 Grok Studio Lab/grok_studio_data_v2/
 ```
 
+If macOS launches the downloaded app from a read-only App Translocation path,
+the launcher automatically uses this writable fallback instead:
+
+```text
+~/Library/Application Support/Grok Studio Lab/V4/
+```
+
 For debugging, you can still run from Terminal:
 
 ```bash

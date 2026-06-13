@@ -7,7 +7,9 @@ export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${PA
 APP_BUNDLE="$(cd "$(dirname "$0")/../.." && pwd)"
 APP_PARENT="$(dirname "$APP_BUNDLE")"
 BUNDLED_HOME="$APP_BUNDLE/Contents/Resources/GrokStudio"
-DATA_HOME="$APP_PARENT/grok_studio_data_v2"
+DATA_FOLDER_NAME="grok_studio_data_v2"
+PREFERRED_DATA_HOME="$APP_PARENT/$DATA_FOLDER_NAME"
+FALLBACK_DATA_HOME="$HOME/Library/Application Support/Grok Studio Lab/V4"
 HOST="${GROK_STUDIO_HOST:-127.0.0.1}"
 PORT="${GROK_STUDIO_PORT:-8765}"
 
@@ -56,6 +58,14 @@ PYTHON_BIN="$(find_python || true)"
 if [[ -z "$PYTHON_BIN" ]]; then
   show_dialog "Python 3를 찾을 수 없습니다. Homebrew에서 'brew install python'을 실행한 뒤 Grok Studio Lab을 다시 열어주세요."
   exit 1
+fi
+
+if [[ -n "${GROK_STUDIO_DATA_DIR:-}" ]]; then
+  DATA_HOME="$GROK_STUDIO_DATA_DIR"
+elif [[ "$APP_BUNDLE" == *"/AppTranslocation/"* || ! -w "$APP_PARENT" ]]; then
+  DATA_HOME="$FALLBACK_DATA_HOME"
+else
+  DATA_HOME="$PREFERRED_DATA_HOME"
 fi
 
 mkdir -p \
