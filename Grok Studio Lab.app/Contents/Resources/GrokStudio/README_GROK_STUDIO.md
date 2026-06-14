@@ -33,8 +33,11 @@ If macOS launches the downloaded app from a read-only App Translocation path,
 the launcher automatically uses this writable fallback instead:
 
 ```text
-~/Library/Application Support/Grok Studio Lab/V4/
+~/Library/Application Support/Grok Studio Lab/V4/Instances/<download-instance>/
 ```
+
+Each newly downloaded translocated app uses a separate clean instance folder,
+so an older download's library settings are not reused.
 
 For debugging, you can still run from Terminal:
 

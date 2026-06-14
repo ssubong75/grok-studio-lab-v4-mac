@@ -9,7 +9,7 @@ APP_PARENT="$(dirname "$APP_BUNDLE")"
 BUNDLED_HOME="$APP_BUNDLE/Contents/Resources/GrokStudio"
 DATA_FOLDER_NAME="grok_studio_data_v2"
 PREFERRED_DATA_HOME="$APP_PARENT/$DATA_FOLDER_NAME"
-FALLBACK_DATA_HOME="$HOME/Library/Application Support/Grok Studio Lab/V4"
+FALLBACK_DATA_BASE="$HOME/Library/Application Support/Grok Studio Lab/V4/Instances"
 HOST="${GROK_STUDIO_HOST:-127.0.0.1}"
 PORT="${GROK_STUDIO_PORT:-8765}"
 
@@ -43,6 +43,17 @@ find_python() {
   return 1
 }
 
+fallback_instance_id() {
+  local identity
+  identity="$(/usr/bin/xattr -p com.apple.quarantine "$APP_BUNDLE" 2>/dev/null || true)"
+  if [[ -z "$identity" && "$APP_BUNDLE" == *"/AppTranslocation/"* ]]; then
+    identity="${APP_BUNDLE#*/AppTranslocation/}"
+    identity="${identity%%/*}"
+  fi
+  [[ -n "$identity" ]] || identity="$APP_BUNDLE"
+  print -rn -- "$identity" | /usr/bin/shasum -a 256 | /usr/bin/awk '{print substr($1, 1, 16)}'
+}
+
 if [[ -f "$APP_PARENT/grok_studio.py" ]]; then
   TARGET_HOME="$APP_PARENT"
 else
@@ -63,7 +74,7 @@ fi
 if [[ -n "${GROK_STUDIO_DATA_DIR:-}" ]]; then
   DATA_HOME="$GROK_STUDIO_DATA_DIR"
 elif [[ "$APP_BUNDLE" == *"/AppTranslocation/"* || ! -w "$APP_PARENT" ]]; then
-  DATA_HOME="$FALLBACK_DATA_HOME"
+  DATA_HOME="$FALLBACK_DATA_BASE/$(fallback_instance_id)"
 else
   DATA_HOME="$PREFERRED_DATA_HOME"
 fi
