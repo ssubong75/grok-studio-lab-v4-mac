@@ -144,6 +144,10 @@
 		<data>
 		qrui3CnV7rAWkdZmg0ZB7pUNKRI=
 		</data>
+		<key>Resources/launch_grok_studio.zsh</key>
+		<data>
+		2AKu0IYvZQgXaABPA3clncSlIGo=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -390,6 +394,13 @@
 			<key>hash2</key>
 			<data>
 			R1ZZ9wB8hXWLKiNby3ceSemQGa/JS5fnsdPb7CwHZPU=
+			</data>
+		</dict>
+		<key>Resources/launch_grok_studio.zsh</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UGWnBE7TyqCUUBb4pKLypgPjfiW8gYALuFS3fxfMQT8=
 			</data>
 		</dict>
 	</dict>
